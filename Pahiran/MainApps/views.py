@@ -21,20 +21,12 @@ def home(request):
     return render(request, 'MainApps/home.html', context)
 
 
-
-
-
-
 def product_info(request, id=None):
     product = get_object_or_404(Product, id=id, is_active=True)
-
-    # Product images
     images = product.images.all()
 
-    # Sizes
     sizes = [product.size] if product.size else []
 
-    # Colors
     colors_qs = product.images.values('color_choice', 'custom_color').distinct()
     colors = []
     for c in colors_qs:
@@ -45,15 +37,12 @@ def product_info(request, id=None):
 
     unique_colors = list(dict.fromkeys(colors))
 
-    # 🔥 Best Seller Products (by sold count)
     best_sellers = (
         Product.objects
         .filter(is_active=True)
         .exclude(id=product.id)
         .order_by('-sold')[:6]
     )
-
-    # 🔁 Related Products (same category)
     related_products = (
         Product.objects
         .filter(
