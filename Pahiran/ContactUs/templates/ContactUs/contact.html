@@ -1,0 +1,110 @@
+
+        {% extends "base.html" %}
+		{% block title %}Contact Us{% endblock %}
+		{% load static %}
+		{% block Main_contents %}
+		<section class="breadcrumb-area">
+			<div class="container-fluid custom-container">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="bc-inner">
+							<p><a href="#">Home  |</a> Contact Us</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact-area">
+			<div class="container-fluid custom-container">
+				<div class="section-heading pb-30">
+					<h3>join with <span>us</span></h3>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-md-8 col-lg-8 col-xl-6">
+						<div class="contact-form">
+							<form action="#">
+								<div class="row">
+									<div class="col-xl-6">
+										<input type="text" placeholder="First Name*">
+									</div>
+									<div class="col-xl-6">
+										<input type="text" placeholder="Last Name*">
+									</div>
+									<div class="col-xl-6">
+										<input type="text" placeholder="Email*">
+									</div>
+									<div class="col-xl-6">
+										<input type="text" placeholder="Website">
+									</div>
+									<div class="col-xl-12">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-xl-12">
+										<input type="submit" value="SUBMIT">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="google-map">
+			<div class="row no-gutters">
+				<div class="col-md-6 col-lg-6">
+					<iframe
+						width="100%"
+						height="400"
+						frameborder="0"
+						style="border:0"
+						src="https://www.google.com/maps?q=40.730260,-74.040315&hl=es;z=14&output=embed"
+						allowfullscreen>
+					</iframe>
+				</div>
+
+				<!-- /.col-xl-6 -->
+				<div class="col-md-6 col-lg-6">
+					<div class="contact-info">
+						<h5>ThemeIM Park</h5>
+						<span>garmany</span>
+						<p>Queens stae park city, Momin Tower 78, New York,WT47.</p>
+						<p>Monday - Sunday:<span> 9:00am - 7:15pm</span> </p>
+						<p>Phone:<span> 022 1458 645 125</span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="store-area padding-120">
+			<div class="container">
+				<div class="section-heading  pb-30">
+					<h3>SHOP ALSO <span>HERE</span></h3>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="single-store">
+							<img src="media/images/banner/cf1.jpg" alt="">
+							<a href="#">paris fashion city</a>
+							<p>france</p>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="single-store">
+							<img src="media/images/banner/cf2.jpg" alt="">
+							<a href="#">fashion world</a>
+							<p>new zealand</p>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="single-store">
+							<img src="media/images/banner/cf3.jpg" alt="">
+							<a href="#">ThemeIM Park</a>
+							<p>manhattan</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		{% endblock %}
